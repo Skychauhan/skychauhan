@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects with Canvas</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <link rel="stylesheet" href="./style.css">
+
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 94vh;
+      margin: 0;
+      /* Apply the new background color */
+      padding: 0px;
+    }
+
+    .gradient {
+      position: relative;
+      width: 550px; /* A4 size width in pixels (assuming 72 dpi) */
+      height: 550px; /* Increase the height to make the content overflow */
+      background-color: rgba(70, 70, 70, 0.8750);
+      border-radius: 4px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Adding a slight shadow effect */
+      padding : 50px;
+      margin: 20px; /* Adding margin to create space between the page and screen edges */
+      overflow-y: initial; /* Adding a scrollbar when content overflows */
+      /* Update text alignment */
+      text-align: left;
+    }
+
+    .Projects {
+      /* Update text alignment */
+      text-align: left;
+      font-size: 24px;
+      font-weight: bold;
+      color: white; /* Change the font color to white */
+      /* Change the font family */
+      font-family: "Sana Pro", sans-serif;
+      position: relative; /* Add relative positioning for the pseudo-element */
+      margin-bottom: 45px; /* Increase the distance between Projects and content */
+    }
+
+    .Projects::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      bottom: -10px; /* Adjust the space between text and underline here */
+      width: 8%;
+      height: 1px;
+      background-color: white; /* Customize the underline color */
+    }
+
+    /* Change the font color of the content to white and update the font family */
+    .gradient p {
+      color: white;
+      font-family: "Sana Pro", sans-serif;
+      /* Justify align the content */
+      text-align: justify;
+    }
+
+    /* Add styles to the canvas element */
+    #canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: -1;
+    }
+
+    .social-icons {
+      position: fixed;
+      bottom: 20px;
+      right: 47%;
+      display: flex;
+      gap: 20px;
+      z-index: 999;
+    }
+
+    @media (max-width: 600px) {
+      .gradient {
+        width: 100%; /* Set width to 100% on smaller screens */
+        margin: 10px; /* Adjust the margin on smaller screens */
+      }
+
+      .Projects {
+        font-size: 20px; /* Adjust the font size on smaller screens */
+      }
+
+      .gradient p {
+        font-size: 16px; /* Adjust the paragraph font size on smaller screens */
+      }
+
+      .social-icons {
+        bottom: 10px; /* Adjust the distance from the bottom on smaller screens */
+      }
+    }
+
+  </style>+
+</head>
+<body>
+  <div class="gradient">
+    <div class="Projects">Projects</div>
+    <!-- Add your additional content here -->
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore consequatur aliquam cum autem, ut consequuntur perspiciatis commodi ea quisquam eum eveniet id officiis, culpa ipsa nihil ex iste modi quaerat. Minima laborum nihil blanditiis assumenda perspiciatis veniam tempora earum consequuntur laboriosam? Dolorum, dolores veritatis! Molestiae fugiat ipsum inventore doloribus quia quibusdam modi esse eaque deleniti iure, a dignissimos deserunt dicta, eligendi unde in quod autem debitis dolorem? Quis voluptas eaque exercitationem quam officia est molestias quos. Libero, eum. Eum illum assumenda beatae ea sunt optio unde, fugit, quam id tempore eaque veritatis, quibusdam exercitationem soluta facere. Sed, ratione? Id est in, enim eveniet nemo distinctio! Corporis, explicabo perferendis? Dolores, saepe modi! Deserunt dolorum excepturi debitis totam eveniet eaque blanditiis quos. Voluptates rem enim corporis provident eligendi exercitationem totam laboriosam, ipsa saepe amet minus earum assumenda, illo neque aliquam pariatur cupiditate eaque modi sunt magni laudantium suscipit, quo ex! Dolores fugit inventore nobis quisquam rerum quia voluptate nesciunt dolore alias deserunt minima eaque rem porro aliquam, exercitationem voluptas vero culpa deleniti optio animi itaque! Voluptatibus, nam accusamus. Fugiat est cupiditate facere modi laudantium recusandae nemo inventore. Asperiores quo aspernatur saepe, dicta atque, exercitationem et beatae fugiat iste cupiditate illum accusamus delectus.</p>
+  </div>
+  <div class="social-icons">
+    <a href="https://www.linkedin.com/in/mr-akash-chauhan-a95088228/" target="_blank">
+        <i class="fab fa-linkedin"></i>
+    </a>
+    <a href="https://github.com/Ak-B3HIVE/MyOwnHive.git" target="_blank">
+        <i class="fab fa-github"></i>
+    </a>
+    <a href="https://twitter.com/B3Hive" target="_blank">
+        <i class="fab fa-twitter"></i>
+    </a>
+  </div>
+
+  <canvas id="canvas"></canvas>
+
+  <script src="./script.js"></script>
+</body>
+</html>
